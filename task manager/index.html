@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Management Tool</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Login/Register Section -->
+    <div id="auth-section">
+      <h2>Login / Register</h2>
+      <form id="auth-form">
+        <input type="text" id="username" placeholder="Username" required />
+        <input type="password" id="password" placeholder="Password" required />
+        <button type="submit" id="login-register-btn">Login</button>
+      </form>
+      <p id="auth-message"></p>
+      <button id="toggle-auth" onclick="toggleAuth()">Switch to Register</button>
+    </div>
+
+    <!-- Task Management Section -->
+    <div id="task-section" style="display:none;">
+      <h2>Task Management</h2>
+      <div>
+        <input type="text" id="task-input" placeholder="Enter task" />
+        <input type="date" id="due-date" />
+        <button onclick="addTask()">Add Task</button>
+      </div>
+      <div id="task-list"></div>
+
+      <!-- Statistics Section -->
+      <div>
+        <button onclick="viewStats('weekly')">View Weekly Stats</button>
+        <button onclick="viewStats('monthly')">View Monthly Stats</button>
+        <div id="stats"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
